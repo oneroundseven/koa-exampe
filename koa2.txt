@@ -1,0 +1,50 @@
+koa 简介
+Node.js平台的下一代开发框架
+Express属于同一拨人开发
+
+为什么再开发一套？
+
+Express 目前最流行的web框架
+api简单
+基于es5语法
+实现异步代码 -> 回调
+多层回调，可读性差
+
+generator函数 & yield语句
+generator函数: function关键字与函数名之间有一个星号。
+yield语句: 暂停执行后面的操作，并将紧跟在yield后面的那个表达式的值，作为返回的对象的value属性值。
+next参数: 覆盖掉上一个yield语句的值。
+
+async 函数
+本质上就是一个generator函数，优化了generator函数
+1、内置执行器(映射koa1.x中的co模块)。
+2、更好的语义。
+3、返回值是 Promise(比Generator函数的返回值是 Iterator 对象方便易使用)。
+
+中间件
+中间件其是一个函数，在响应发送之前对请求进行一些操作。
+存在next函数，整个全局有个数组存储所有中间件函数数组，上一个执行完会抛给下一个。
+类似java中的过滤器概念。
+
+express vs koa 中间件
+Express一个中间件只能在调用 next() 之前做相关操作，而不是之后。一旦你调用 next()，请求将永远不再接触到这个中间件。
+如果不调用next()，请求将被挂起一直等待到超时。
+
+koa-generator
+
+koa-static
+koa-static-cache
+koa-router
+koa-bodyparser
+koa-ejs
+koa-json
+koa-send
+jsonp?
+koa2 session cookie
+
+debug模块？
+日志模块
+
+
+
+
