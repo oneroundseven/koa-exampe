@@ -4,11 +4,12 @@
   "description": "",
   "main": "async.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "set debug=say:* && node debug.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "co": "^4.6.0"
+    "co": "^4.6.0",
+    "debug": "^3.1.0"
   }
 }

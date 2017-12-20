@@ -1,4 +1,4 @@
-koa 简介
+koa
 Node.js平台的下一代开发框架
 Express属于同一拨人开发
 
@@ -33,18 +33,37 @@ Express一个中间件只能在调用 next() 之前做相关操作，而不是�
 koa-generator
 
 koa-static
+MIME
+多用途互联网邮件扩展类型
+设定某种扩展名的文件用一种应用程序来打开的方式类型
+
 koa-static-cache
+增加缓存机制，默认以流的方式存储
+缓存在应用启动的时候初始化，如新增静态资源需关闭预加载功能，或重启app
+ETag采用MD5加密
+
 koa-router
+allowedMethods 数其实就是当所有中间件函数执行完了最终状态
+
 koa-bodyparser
-koa-ejs
-koa-json
-koa-send
-jsonp?
-koa2 session cookie
+转换解析json、text、form表单提交数据
+form转换过程
+bodyparse -> co-body -> form.js -> qs.parse
 
-debug模块？
-日志模块
+koa-json && jsonp
 
+
+koa2实现session
+如果session数据量很小，可以直接存在内存中
+如果session数据量很大，则需要存储介质(数据库)存放session数据
+
+生成sessionID存储到页面cookie中设置过期时间等并加密处理；
+每次请求过来解码sessionID里面的内容，从内存或存储介质取得session信息；
+
+debug模块
+直接执行，不输出任何内容
+根据debug模块类型输出对应的调试代码
+不用担心遗忘删除影响线上日志
 
 
 
